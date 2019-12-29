@@ -37,7 +37,7 @@ class CostPrice extends Component {
     };
 
     axios
-      .post("https://record-mgmt-backend.herokuapp.com//cp/add", newData)
+      .post("https://record-mgmt-backend.herokuapp.com/cp/add", newData)
       .then(alert("Your Data has been added to CostPrice Database"));
 
     this.setState({
