@@ -37,7 +37,7 @@ class SellPrice extends Component {
     };
 
     axios
-      .post("http://localhost:5000/sp/add", newData)
+      .post("https://record-mgmt-backend.herokuapp.com/sp/add", newData)
       .then(alert("Your Data has been added to SellPrice Database"));
 
       this.setState({

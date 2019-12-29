@@ -62,7 +62,7 @@ class Search extends Component {
     if (this.state.productId) {
       axios
         .get(
-          "http://localhost:5000/" +
+          "https://record-mgmt-backend.herokuapp.com/" +
             priceSelector +
             "/" +
             this.state.productId +
@@ -72,7 +72,7 @@ class Search extends Component {
         .then((res) => this.transferData(res.data));
     } else {
       axios
-        .get("http://localhost:5000/" + priceSelector + "/")
+        .get("https://record-mgmt-backend.herokuapp.com/" + priceSelector + "/")
         .then((res) => this.transferData(res.data));
     }
   };
@@ -80,7 +80,7 @@ class Search extends Component {
     const priceSelector = this.state.search === "1" ? "sp" : "cp";
 
     axios
-      .delete("http://localhost:5000/" + priceSelector + "/" + id)
+      .delete("https://record-mgmt-backend.herokuapp.com/" + priceSelector + "/" + id)
       .then(this.setState({results: this.state.results.filter(element => element._id !== id)}))
       .catch((err) => window.alert(err));
   }  

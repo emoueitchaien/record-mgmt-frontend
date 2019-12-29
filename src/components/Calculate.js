@@ -18,13 +18,13 @@ class Calculate extends Component {
     this.setState({ revenue: this.state.revenue });
   };
   handleClick = () => {
-    axios.get("http://localhost:5000/cp/total").then((res) =>
+    axios.get("https://record-mgmt-backend.herokuapp.com/cp/total").then((res) =>
       this.setState({ cpTotal: res.data[0].total }, () => {
         this.updateState();
         this.calculate();
       })
     );
-    axios.get("http://localhost:5000/sp/total").then((res) =>
+    axios.get("https://record-mgmt-backend.herokuapp.com/sp/total").then((res) =>
       this.setState({ spTotal: res.data[0].total }, () => {
         this.updateState();
         this.calculate();
