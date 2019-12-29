@@ -40,7 +40,7 @@ class Calculate extends Component {
   render() {
     return (
       <React.Fragment>
-        <Typography variant="h1" align='center'>{this.state.revenue}</Typography>
+        <Typography variant="h1" align='center'>{this.state.revenue.toFixed(2)}</Typography>
         <Container
         style={style}>
         <Button variant='contained' color="primary"  onClick={this.handleClick}>
